@@ -1,1 +1,14 @@
-HELLO THIS IS A TEXT FILE
+
+<select [(ngModel)]="selectedDevice" (change)="onChange($event)">
+   <option *ngFor="#i of devices">{{i}}</option>
+</select>
+
+
+
+
+
+
+onChange($event) {
+    console.log(this.selectedDevice);
+    console.log($event.target.value);
+}
